@@ -8,7 +8,7 @@ const http = require('http');
 
 const PORT = process.env.PORT || 3000;
 // Lấy URL của app từ Render dashboard
-const APP_URL = '';
+const APP_URL = 'https://oroprf194.onrender.com';
 
 // Ping mỗi 10 phút để không sleep
 setInterval(async () => {
