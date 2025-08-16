@@ -197,12 +197,12 @@ async function processWallet(mnemonic, walletIndex) {
 
     for (let i = 0; i < 100; i++) {
         await swap(mnemonic, ZIG_AMOUNT, CONFIG.zigDenom, CONFIG.oroDenom);
-        await delay(10000);
+        await delay(5000);
     }
 
     for (let i = 0; i < 100; i++) {
         await swap(mnemonic, ORO_AMOUNT, CONFIG.oroDenom, CONFIG.zigDenom);
-        await delay(10000);
+        await delay(5000);
     }
 
     // for (let i = 0; i < 10; i++) {
