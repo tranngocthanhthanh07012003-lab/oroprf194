@@ -200,10 +200,10 @@ async function processWallet(mnemonic, walletIndex) {
         await delay(5000);
     }
 
-    for (let i = 0; i < 100; i++) {
-        await swap(mnemonic, ORO_AMOUNT, CONFIG.oroDenom, CONFIG.zigDenom);
-        await delay(5000);
-    }
+   // for (let i = 0; i < 100; i++) {
+      //  await swap(mnemonic, ORO_AMOUNT, CONFIG.oroDenom, CONFIG.zigDenom);
+     //   await delay(5000);
+   // }
 
     // for (let i = 0; i < 10; i++) {
     //     console.log("\n💧 Đang thêm thanh khoản...");
