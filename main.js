@@ -213,7 +213,7 @@ async function processWallet(mnemonic, walletIndex) {
 }
 
 async function runBot() {
-    for (let liqCount = 0; liqCount < 1000000; liqCount++) {
+    for (let liqCount = 0; liqCount < 10000000000; liqCount++) {
         console.log(`\n=== Chu kỳ Swap thứ ${liqCount + 1} ===`);
         
         // Chia mảng ví thành các batch 10 ví
