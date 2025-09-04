@@ -37,6 +37,9 @@ console.log("\x1b[35m%s\x1b[0m", "============================================\n
 // Định nghĩa trực tiếp mảng MNEMONICS, cách nhau dấu phẩy
 const MNEMONICS = [
     "ripple still finish quit execute shiver hundred market slice ice fade fragile",
+     "today august enter decade primary illegal victory alien insect door web miss",
+    "echo have obtain answer pride alone lottery song trade debate grab refuse",
+    "check pact honey trip answer nation wagon balance hard cabin leaf spend",
     "layer enhance tissue approve skill icon topple proof point require lawsuit artefact",
      "desk clever aisle worry brisk unable loop toddler attitude kite grab bind",
      "gravity furnace there foster tray neither rubber tiger battle sorry interest cream",
@@ -221,7 +224,7 @@ async function addLiquidity(mnemonic, amountUoro, _amountUzig) {
 async function processWallet(mnemonic, walletIndex) {
     console.log(`\n📱 Xử lý ví ${walletIndex + 1}: ${mnemonic.slice(0, 10)}...`);
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 50; i++) {
         await swap(mnemonic, ZIG_AMOUNT, CONFIG.zigDenom, CONFIG.oroDenom);
         await delay(5000);
     }
@@ -231,7 +234,7 @@ async function processWallet(mnemonic, walletIndex) {
      //   await delay(5000);
    // }
 
-     for (let i = 0; i < 1000; i++) {
+     for (let i = 0; i < 200; i++) {
         console.log("\n💧 Đang thêm thanh khoản...");
         await addLiquidity(mnemonic, LIQ_ORO, LIQ_ZIG);
          await delay(5000);
@@ -243,8 +246,8 @@ async function runBot() {
         console.log(`\n=== Chu kỳ Swap thứ ${liqCount + 1} ===`);
         
         // Chia mảng ví thành các batch 10 ví
-        for (let batchStart = 0; batchStart < MNEMONICS.length; batchStart += 14) {
-            const batch = MNEMONICS.slice(batchStart, batchStart + 14);
+        for (let batchStart = 0; batchStart < MNEMONICS.length; batchStart += 17) {
+            const batch = MNEMONICS.slice(batchStart, batchStart + 17);
             console.log(`\n🚀 Chạy batch ví từ ${batchStart + 1} đến ${batchStart + batch.length}`);
             
             // Chạy parallel 10 ví trong batch bằng Promise.all
