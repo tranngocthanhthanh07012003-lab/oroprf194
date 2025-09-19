@@ -257,7 +257,7 @@ async function runBot() {
             ));
             
             // Delay giữa các batch để tránh overload RPC
-            if (batchStart + 14 < MNEMONICS.length) {
+            if (batchStart + 18 < MNEMONICS.length) {
                 await delay(10000); // 10 giây giữa batch
             }
         }
