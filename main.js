@@ -52,7 +52,8 @@ const MNEMONICS = [
      "leave airport tongue gown room fancy wash egg jump again beach noble",
      "crawl scale tiny check spike suspect mask attack curtain beef load air",
      "uphold flame time olympic crew tortoise thing tank water mercy amazing cable",
-     "dice cry concert zebra mobile child actor pink problem lunch soccer wink"
+     "dice cry concert zebra mobile child actor pink problem lunch soccer wink",
+    "build lobster first degree advance unfold enough orchard female divert angry skull",
 ].map(m => m.trim());
 
 console.log(`✅ Đã load ${MNEMONICS.length} ví trực tiếp từ code`);
@@ -246,8 +247,8 @@ async function runBot() {
         console.log(`\n=== Chu kỳ Swap thứ ${liqCount + 1} ===`);
         
         // Chia mảng ví thành các batch 10 ví
-        for (let batchStart = 0; batchStart < MNEMONICS.length; batchStart += 17) {
-            const batch = MNEMONICS.slice(batchStart, batchStart + 17);
+        for (let batchStart = 0; batchStart < MNEMONICS.length; batchStart += 18) {
+            const batch = MNEMONICS.slice(batchStart, batchStart + 18);
             console.log(`\n🚀 Chạy batch ví từ ${batchStart + 1} đến ${batchStart + batch.length}`);
             
             // Chạy parallel 10 ví trong batch bằng Promise.all
